@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+	--highlight: #4236af;
+	--accent: #5246ba;
+	--bg: #fff;
+	--fg: #292a2d;
+	--outline: #919399;
+	--radius: 2mm;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	color: var(--fg);
+	background-color: var(--bg);
+	font-size: 3.5mm;
+	width: calc(100% - 2 * var(--radius));
+	margin: var(--radius);
+}
+
+body div {
+	width: calc(min(20cm, 100% - 2 * var(--radius)));
+	margin-left: calc(max(50% - 10cm, 0cm));
+}
+
+body div div {
+	width: calc(100% - 2 * var(--radius));
+}
+
+h1 {
+	color: var(--highlight);
+}
+
+a {
+	color: var(--highlight);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--accent);
+	text-decoration: underline;
+}
+
+form {
+	margin: var(--radius);
+	width: 100%;
+	min-height: calc(5mm + 2 * var(--radius));
+}
+
+button, input[type=submit] {
+	background-color: var(--highlight);
+	color: var(--bg);
+	border-radius: var(--radius);
+	border: none;
+	padding: calc(var(--radius) + 1px);
+	font-weight: 700;
+	font-size: 3.5mm;
+}
+
+button:active {
+	background-color: var(--accent);
+}
+
+input[type=text] {
+	background-color: var(--bg);
+	border: 1px solid var(--outline);
+	border-radius: var(--radius);
+	padding: var(--radius);
+	font-size: 3.5mm;
+}
+
+#todos form input[type=submit] {
+	float: right;
+}

@@ -1,0 +1,9 @@
+{% for (id, todo) in todos %}
+	<form hx-post="/api/done" hx-target="#todos" hx-swap="innerHtml" class="block text-sm font-medium leading-6 text-gray-900">
+		<div class="mt-2 inline-flex flex-row space-x-2">
+			<label for="done" class="block w-full text-sm font-medium leading-6 text-gray-900">{{ todo }}</label>
+			<input type="hidden" name="id" value="{{ id }}" />
+			<input type="submit" id="done" value="Done" class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" />
+		</div>
+	</form>
+{% endfor %}

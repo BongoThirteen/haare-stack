@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}From my testing server{% endblock %}
+{% block content %}
+<div class="inline-flex flex-row space-x-2">
+	<h1 class="font-bold text-indigo-500">Hi, there!</h1>
+	If you want, you can go check out <a href="/another" class="text-indigo-500 underline hover:text-indigo-300">another page</a> and see what's on this site!
+	<button
+		type="button"
+		hx-get="/api/hello"
+		hx-swap="innerHtml"
+		class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+		>
+			Say hello
+		</button>
+</div>
+{% include "todo-form.html" %}
+{% endblock %}
